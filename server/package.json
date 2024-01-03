@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"netlify deploy --prod",
     "start": "nodemon index.js"
   },
   "keywords": [],
@@ -23,9 +24,12 @@
     "hpp": "^0.2.3",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.5",
+    "netlify-cli": "^17.11.0",
+    "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.9.4",
     "nodemon": "^3.0.1",
     "react-loader-spinner": "^5.4.5",
+    "serverless-http": "^3.2.0",
     "xss-clean": "^0.1.4"
   }
 }
