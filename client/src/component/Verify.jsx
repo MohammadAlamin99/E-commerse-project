@@ -4,6 +4,7 @@ import { useState } from "react";
 import { UserVerifyRequest } from '../apiRequest/ApiRequest';
 import { useParams } from 'react-router-dom';
 import SubmitBtn from './SubmitBtn';
+import { setToken } from '../Helper/SessionHelper';
 
 
 const Verify = () => {
@@ -21,6 +22,7 @@ const loginVerify = async(e)=>{
         setBtnLoader(false);
         if(res['status']==='success'){
             toast.success(res['message']);
+            setToken(res['token'])
             window.location.href=sessionStorage.getItem('lastLocation')
         }
         else{
